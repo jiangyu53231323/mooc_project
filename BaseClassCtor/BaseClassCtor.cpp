@@ -23,7 +23,7 @@ public:
 class D :public B {
 public:
 	using B::B;
-	D() = default;
+	D() { cout << "D()" << endl; }
 	//D(int i):B(i){}
 	//D(char c){}
 	//D(double x) :B(static_cast<int>(x)), x{ 1.0 }{cout << "D(" << x << ")" << endl; }
