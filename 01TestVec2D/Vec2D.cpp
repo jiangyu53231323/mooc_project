@@ -24,7 +24,7 @@ std::string Vec2D::toString()
 
 
 // 向量加法
-Vec2D Vec2D::add(Vec2D secongVec2D)
+Vec2D Vec2D::add(const Vec2D& secongVec2D)
 {
 	// TODO: 在此处添加实现代码.
 	return Vec2D(x_+secongVec2D.x_,y_+secongVec2D.y_);
@@ -32,6 +32,13 @@ Vec2D Vec2D::add(Vec2D secongVec2D)
 
 Vec2D Vec2D::add(double numeral) {
 	return Vec2D(this->x_ + numeral, this->y_ + numeral);
+}
+
+Vec2D Vec2D::operator+ (const Vec2D& secondVec2D) {
+	return this->add(secondVec2D);
+}
+Vec2D Vec2D::operator+ (const double numeral) {
+	return this->add(numeral);
 }
 
 // 读取或者修改向量元素

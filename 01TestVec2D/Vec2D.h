@@ -15,8 +15,10 @@ public:
 	// 将向量转换为字符串形式表示
 	std::string toString();
 	// 向量加法
-	Vec2D add(Vec2D secongVec2D);
+	Vec2D add(const Vec2D& secongVec2D);
 	Vec2D add(double numeral);
+	Vec2D operator+ (const Vec2D& secondVec2D);
+	Vec2D operator+ (const double numeral);
 	double& at(const int index);
 	int compareTo(Vec2D secondVec2D);
 	Vec2D& decrease();

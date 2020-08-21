@@ -17,8 +17,8 @@ int main()
     cout << "v1 = " << v1.toString() << endl;
     cout << "v2 = " << v2.toString() << endl;
     // 向量加法
-    Vec2D v3 = v1.add(v2);
-    Vec2D v4 = v3.add(10.0);
+    Vec2D v3 = v1+v2;
+    Vec2D v4 = v3+10.0;
     cout << "v3 = " << v3.toString() << endl;
     cout << "v4 = " << v4.toString() << endl;
     // 向量减法 点积 数乘
