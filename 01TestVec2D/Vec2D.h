@@ -31,6 +31,9 @@ public:
 	double dot(const Vec2D& secondvec2D);
 	// 自加
 	Vec2D& increase();
+	Vec2D& operator++();
+	Vec2D operator++(int dummy);
+
 	double magnitude();
 	// 数乘
 	Vec2D multiply(double multiplier);
@@ -39,6 +42,7 @@ public:
 	friend Vec2D operator* (double multiplier, Vec2D vec2d);	// 非成员函数
 	// 求负值
 	Vec2D negative();
+	Vec2D operator-();
 	// 减法
 	Vec2D subtract(const Vec2D& secondVec2D);
 	Vec2D subtract(double numeral);

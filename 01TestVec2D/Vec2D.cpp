@@ -99,6 +99,16 @@ Vec2D& Vec2D::increase()
 	return (*this);
 }
 
+Vec2D& Vec2D::operator++() {
+	x_ += 1; y_ += 1;
+	return (*this);
+}
+
+Vec2D Vec2D::operator++(int dummy) {
+	Vec2D temp{ *this };
+	x_ += 1; y_ += 1;
+	return temp;
+}
 
 double Vec2D::magnitude()
 {
@@ -132,6 +142,9 @@ Vec2D Vec2D::negative()
 	return Vec2D(-x_,-y_);
 }
 
+Vec2D Vec2D::operator-() {
+	return Vec2D(-this->x_, -this->y_);
+}
 
 Vec2D Vec2D::subtract(const Vec2D& secondVec2D)
 {
