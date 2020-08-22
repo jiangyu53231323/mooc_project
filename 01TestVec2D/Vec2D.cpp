@@ -76,7 +76,7 @@ double Vec2D::direction()
 }
 
 // 向量点积
-double Vec2D::dot(Vec2D secondvec2D)
+double Vec2D::dot(const Vec2D& secondvec2D)
 {
 	// TODO: 在此处添加实现代码.
 	return (x_ * secondvec2D.x_ + y_ * secondvec2D.y_);
@@ -104,6 +104,18 @@ Vec2D Vec2D::multiply(double multiplier)
 	return Vec2D(x_*multiplier,y_*multiplier);
 }
 
+double Vec2D::operator*(const Vec2D& secondVec2D) {
+	return this->dot(secondVec2D);
+}
+
+Vec2D Vec2D::operator* (const double multiplier) {
+	return this->multiply(multiplier);
+}
+
+Vec2D operator* (double multiplier, Vec2D vec2d) {
+	return vec2d.multiply(multiplier);
+}
+
 // 向量求负值
 Vec2D Vec2D::negative()
 {
@@ -112,7 +124,7 @@ Vec2D Vec2D::negative()
 }
 
 
-Vec2D Vec2D::subtract(Vec2D secondVec2D)
+Vec2D Vec2D::subtract(const Vec2D& secondVec2D)
 {
 	// TODO: 在此处添加实现代码.
 	return Vec2D(x_ - secondVec2D.x_,y_-secondVec2D.y_);
@@ -120,4 +132,11 @@ Vec2D Vec2D::subtract(Vec2D secondVec2D)
 
 Vec2D Vec2D::subtract(double numeral) {
 	return Vec2D(x_ - numeral, y_ - numeral);
+}
+
+Vec2D Vec2D::operator- (const Vec2D& secondVec2D) {
+	return this->subtract(secondVec2D);
+}
+Vec2D Vec2D::operator- (const double numeral) {
+	return this->subtract(numeral);
 }

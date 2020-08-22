@@ -19,16 +19,28 @@ public:
 	Vec2D add(double numeral);
 	Vec2D operator+ (const Vec2D& secondVec2D);
 	Vec2D operator+ (const double numeral);
+	// 读取或修改元素
 	double& at(const int index);
 	int compareTo(Vec2D secondVec2D);
 	Vec2D& decrease();
+	// 自减
 	double direction();
-	double dot(Vec2D secondvec2D);
+	// 点积
+	double dot(const Vec2D& secondvec2D);
+	// 自加
 	Vec2D& increase();
 	double magnitude();
+	// 数乘
 	Vec2D multiply(double multiplier);
+	double operator* (const Vec2D& secondVec2D);
+	Vec2D operator* (const double multiplier);
+	friend Vec2D operator* (double multiplier, Vec2D vec2d);
+	// 求负值
 	Vec2D negative();
-	Vec2D subtract(Vec2D secondVec2D);
+	// 减法
+	Vec2D subtract(const Vec2D& secondVec2D);
 	Vec2D subtract(double numeral);
+	Vec2D operator- (const Vec2D& secondVec2D);
+	Vec2D operator- (const double numeral);
 };
 
