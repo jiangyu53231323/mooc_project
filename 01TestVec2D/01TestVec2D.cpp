@@ -21,6 +21,10 @@ int main()
 	Vec2D v4 = v3 + 10.0;
 	cout << "v3 = " << v3.toString() << endl;
 	cout << "v4 = " << v4.toString() << endl;
+
+	Vec2D va1{ 10,12 }, va2{ 1,2 };
+	cout << "va1 += va2: " << (va1 += va2).toString() << endl;
+	cout << "va1 -= va2: " << (va1 -= va2).toString() << endl;
 	// 向量减法 点积 数乘
 	//Vec2D v5 = v2.subtract(v1);
 	//double v6 = v2.dot(v1);
@@ -39,8 +43,12 @@ int main()
 	cout << "++v8 = " << v8.increase().toString() << endl;
 	cout << "--v2 = " << v2.decrease().toString() << endl;
 	// 读取或修改向量元素
-	cout << "v1.x_ = " << v1.at(0) << endl;
-	cout << "v1.y_ = " << v1.at(1) << endl;
+	//cout << "v1.x_ = " << v1.at(0) << endl;
+	//cout << "v1.y_ = " << v1.at(1) << endl;
+	v1[0] = 31.1;
+	cout << "v1.x_ = " << v1[0] << endl;
+	cout << "v1.y_ = " << v1[1] << endl;
+	/*v1[8] = 10.0;*/
 	// 向量的长度magnitude 角度direction
 	cout << "v1.magnitude = " << v1.magnitude() << endl;
 	cout << "v1.direction = " << v1.direction() << endl;

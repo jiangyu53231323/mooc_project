@@ -41,6 +41,12 @@ Vec2D Vec2D::operator+ (const double numeral) {
 	return this->add(numeral);
 }
 
+Vec2D& Vec2D::operator+= (const Vec2D& secondVec2D) {
+	x_ += secondVec2D.x_;
+	y_ += secondVec2D.y_;
+	return (*this);
+}
+
 // 读取或者修改向量元素
 double& Vec2D::at(const int index)
 {
@@ -50,6 +56,9 @@ double& Vec2D::at(const int index)
 	else throw std::out_of_range("at() only accept 1 or 2 as parameter");
 }
 
+double& Vec2D::operator[] (const int& index){
+	return at(index);
+}
 
 int Vec2D::compareTo(Vec2D secondVec2D)
 {
@@ -137,6 +146,13 @@ Vec2D Vec2D::subtract(double numeral) {
 Vec2D Vec2D::operator- (const Vec2D& secondVec2D) {
 	return this->subtract(secondVec2D);
 }
+
 Vec2D Vec2D::operator- (const double numeral) {
 	return this->subtract(numeral);
+}
+
+Vec2D& Vec2D::operator-= (const Vec2D& secondVec2D) {
+	x_ -= secondVec2D.x_;
+	y_ -= secondVec2D.y_;
+	return (*this);
 }
