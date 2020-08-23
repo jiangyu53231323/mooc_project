@@ -3,6 +3,8 @@
 #include <string>
 #include <cmath>
 #include <exception>
+#include <istream>
+#include <ostream>
 
 class Vec2D
 {
@@ -49,5 +51,8 @@ public:
 	Vec2D operator- (const Vec2D& secondVec2D);
 	Vec2D operator- (const double numeral);
 	Vec2D& operator-= (const Vec2D& secondVec2D);
+
+	friend std::ostream& operator<<(std::ostream& os, const Vec2D& v);
+	friend std::istream& operator>>(std::istream& is, Vec2D& v);
 };
 

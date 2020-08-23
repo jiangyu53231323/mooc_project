@@ -59,6 +59,10 @@ int main()
 	// 比较两个向量
 	cout << "v1 compare v2 : " << v1.compareTo(v2) << endl;
 
+	cout << "please input a Vec2D: ";
+	Vec2D v9;
+	std::cin >> v9;	// operator>>(std::cin,v9)
+	cout << v9 << endl;
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单

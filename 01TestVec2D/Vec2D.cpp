@@ -169,3 +169,12 @@ Vec2D& Vec2D::operator-= (const Vec2D& secondVec2D) {
 	y_ -= secondVec2D.y_;
 	return (*this);
 }
+
+std::ostream& operator<<(std::ostream& os, const Vec2D& v) {
+	os << "(" << v.x_ << ", " << v.y_ << ")";
+	return os;
+}
+std::istream& operator>>(std::istream& is, Vec2D& v) {
+	is >> v.x_ >> v.y_;
+	return is;
+}
