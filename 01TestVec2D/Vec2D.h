@@ -35,8 +35,9 @@ public:
 	Vec2D& increase();
 	Vec2D& operator++();
 	Vec2D operator++(int dummy);
-
+	// 求长度
 	double magnitude();
+	operator double();
 	// 数乘
 	Vec2D multiply(double multiplier);
 	double operator* (const Vec2D& secondVec2D);

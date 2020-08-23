@@ -55,6 +55,7 @@ int main()
 	/*v1[8] = 10.0;*/
 	// 向量的长度magnitude 角度direction
 	cout << "v1.magnitude = " << v1.magnitude() << endl;
+	cout << "double(v1) = " << static_cast<double>(v1) << endl;
 	cout << "v1.direction = " << v1.direction() << endl;
 	// 比较两个向量
 	cout << "v1 compare v2 : " << v1.compareTo(v2) << endl;

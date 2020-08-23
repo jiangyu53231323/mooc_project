@@ -116,6 +116,10 @@ double Vec2D::magnitude()
 	return sqrt(x_ * x_ + y_ * y_);
 }
 
+Vec2D::operator double() {
+	return this->magnitude();
+}
+
 // ÏòÁ¿Êı³Ë
 Vec2D Vec2D::multiply(double multiplier)
 {
